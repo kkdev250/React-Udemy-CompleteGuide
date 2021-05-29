@@ -1,0 +1,80 @@
+.Modal {
+    position: fixed;
+    z-index: 200;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 2px #ccc;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    top: 30%;
+    left: 25%;
+    width: 50%;
+    /*transition: all 0.3s ease-out;*/
+}
+
+.ModalOpenOLD-TRANSITION {
+    /*display: block;*/
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ModalClosedOLD-TRANSITION {
+    /*display: none;*/
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-100%); /*100% of modal(!, not parent) height*/
+}
+
+.ModalOpenOLD-ANIMATION {
+    animation: openModal 0.4s ease-out forwards; /*forwards - to stop at 100%, not to back to 0% */
+}
+@keyframes openModal {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.ModalClosedOLD-ANIMATION {
+    pointer-events: none;
+    animation: closeModal 1s ease-out forwards;
+}
+@keyframes closeModal {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateY(60%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+.fade-slide-enter {
+    /*this class will be added for a moment (1 frame) - good place to initialize transition/animiation*/
+}
+
+.fade-slide-enter-active {
+    animation: openModal 0.4s ease-out forwards;
+}
+
+.fade-slide-exit {
+    /*this class will be added for a moment (1 frame) - good place to initialize transition/animiation*/
+}
+
+.fade-slide-exit-active {
+    animation: closeModal 1s ease-out forwards
+}

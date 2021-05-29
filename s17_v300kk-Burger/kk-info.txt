@@ -1,0 +1,1 @@
+dodatkowa opcja: usuwanie zamówienia z listy zamówień, w kodzie oznaczone jako //KK - moje modyfikacje, nie część kursu

@@ -1,0 +1,74 @@
+-tworzenie nowego projektu: npx create-react-app nazwa-projektu
+-tworzenie symlinku do node modules: np. mklink /d node_modules d:\React\Udemy\node_modules
+-uruchamianie serwera: npm start
+(Burger Builder login: test@test.com, 123456)
+
+-tworzenie nowego projektu o strukturze folderów i plików takiej samej jak w kursie:  
+npx create-react-app nazwa-projektu --scripts-verison 1.1.5 
+
+sec3(32-49):
+-class-based components, functional components, 
+-props, props.children, 
+-events(click),
+-state, useState(), React hooks(useState() React hook), componesents: container/statefull/smart vs presentational/stateless/dumb, 
+-passing method reference between componenents - as a prop, e.g.: <ChildComponent prop={metod} /> (method without params)
+-2 ways of passing method(with params!) reference between components e.g.: prop={()=>method(param)} / ={method.bind(this, param)}
+-two-way binding
+-styling: .css files / inline styling
+-zadanie 1
+sec4(53-61):
+-if: conditionaly rendering: using ternary expressions / using 'if'
+-'for': outputting lists: array.map
+-zadanie 2
+sec5(65-75):
+-dynamic(conditional) inline styles, dynamic class names
+-Radium npm: enables pseudo selectors and media queries (e.g. :hover, @media) in inline styles
+-styled-components npm: creating React components with added styles (in internal css sheet, not inline!), including :hover, @media
+-CSS Modules - scoped css files (nie trzeba niczego doinstalowywaæ dla react-scripts 2.x.x)
+sec6(78-82): errors, React Developer Tools, Error Boundaries - higher order component (HOC)
+sec7(85-115): 
+-component lifecycle hooks, useEffect() React hook, React.memo(), PureComponent
+-rendering more than 1 root element in JSX: array of elements(with keys), wrapping with HOC - e.g. React.Fragment
+-creating HOC's in two ways: as a functional component that wraps JSX, or js function that wraps export
+-setState - two ways: setState({changes}) - if you don't refer to this.state in changes, OR setState((prevState, props)=>{})
+-prop-types npm: declaring types for props
+-refs - two ways of creating and using references to html/jsx tags, useRef() hook
+-context.Provider, context.Consumer or better: contextType, useContext() hook - passing data between components
+sec8(119-157): BurgerBuilder project - basic version
+sec9(160-175): HTTP AJAX requests, JSONPlaceholder(dummy API server), npm axios: Axios, Axios Interceptors, Axios instances
+sec10(178-185): BurgerBuilder project - adding Axios, using Firebase as backend
+sec11(188-217): 
+-npm react-router-dom: <BrowserRouter>,<Link>,<NavLink>,<Route>,<Switch>,<Redirect>,withRouter,React.lazy+Suspese
+-zadanie 3
+sec12(221-232): BurgerBuilder project - adding routing
+sec13(235-249): BurgerBuilder project - adding forms and validations
+sec14(252-272): 
+-npm redux, react-redux
+-zadanie 4
+-zadanie 5
+sec15(273-282): BurgerBuilder project - adding redux
+sec16(283-298): redux advanced: Middleware, Redux DevTools, Action Creators, npm redux-thunk, running async code
+sec17(299-320): BurgerBuilder project - redux advanced
+sec18(321-341): BurgerBuilder project - authentication (using Firebase)
+sec19(345-350): BurgerBuilder project - fixing, optimization
+sec20(354-362): BurgerBuilder project - unit testing: Jest(test runner) + Enzyme (testing utilities), testing: components, containers, redux
+sec21(365-368): BurgerBuilder project - deploying the app to the web: npm run build, deploying on Firebase
+sec22(372-383): Webpack
+sec23(386-393): Next.js - server side rendering
+sec24(396-408): animations: npm react-transition-group, <Transition>(to allow animate mounting/unmounting(!) components), <CSSTransition>
+sec25(412-422): Redux Saga (alternative to redux-thunk)
+sec26(425-449): React Hooks: 
+-useState (instead setState), 
+-useEffect (instead componentDidMount, componentDidUpdate), dependencies, cleaning up previous useEffect before running next one
+-useCallback (function caching - to not re-create the function anew when component re-renders), dependencies
+-useRef (reference to HTML element)
+-useReducer (alternative to useState for more complex states), useReducer hook is NOT related to the Redux!
+-useContext (passing data between components)
+-useMemo (value caching - like useCallback, but useCallback returns memorized function while useMemo runs function and returns memorized value)
+-custom hooks
+sec27(452-463): BurgerBuilder project - Hooks: no more class-based components, no more lifecycle-hooks, no more setState calls, instead hooks only:
+-useEffect, React.lazy+Suspense, useState, useCallback, custom hook (http request error), also two new redux hooks:
+-useDispatch (redux hook - instead of mapDispatchToProps and connect HOC, it's like mapping dispatch to const(s) instead of props)
+-useSelector (redux hook - instead of mapStateToProps and connect HOC, it's like mapping state to const(s) instead of props)
+sec28(467-477): replacing Redux with hooks - two approaches: context API (useContext), custom store based on hooks
+sec29(480): css-only burger explained

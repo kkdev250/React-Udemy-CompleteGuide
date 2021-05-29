@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.App nav li{
+  margin: 20px;
+  display: inline-block;
+}
+
+.App nav a {
+  text-decoration: none;
+}
+
+.App nav a:hover,
+.App nav a:active,
+.App nav a.active {
+  color: orangered;
+}

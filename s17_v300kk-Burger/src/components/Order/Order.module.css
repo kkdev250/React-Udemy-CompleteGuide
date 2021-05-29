@@ -1,0 +1,35 @@
+.Order {
+  width: 80%;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
+  padding: 10px;
+  margin: 10px auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.Order .delete {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  opacity: 0.3;
+}
+.Order .delete:hover {
+  opacity: 1;
+}
+.Order .delete::before, .Order .delete::after {
+  position: absolute;
+  left: 10px;
+  content: '';
+  height: 20px;
+  width: 1px;
+  background-color: #333;
+}
+.Order .delete::before {
+  transform: rotate(45deg);
+}
+.Order .delete::after {
+  transform: rotate(-45deg);
+}

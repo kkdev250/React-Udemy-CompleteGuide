@@ -1,0 +1,9 @@
+/*it's NOT a scoped styling! to simulate scoped styling - add a class name to the whole component: */
+.Person {
+    width: 60%;
+    margin: 16px auto;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    padding: 16px;
+    text-align: center;
+}
